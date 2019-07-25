@@ -31,7 +31,8 @@ const DrawerNavigator = createDrawerNavigator(
     contentComponent: props => <DrawerComponent {...props} />,
     drawerWidth: 300,
     initialRouteName: "Home",
-  }
+  },
+  
 );
 
 export default DrawerNavigator;

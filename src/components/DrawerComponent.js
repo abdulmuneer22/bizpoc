@@ -33,7 +33,7 @@ export class DrawerComponent extends Component {
                 backgroundColor :'white',
                 justifyContent : 'flex-start',
                 alignItems : 'flex-start',
-                paddingVertical : 20
+                paddingTop : 80
             }}>
                 {
                     DrapwerItems.map((itm) => <Button title={itm.name} key={itm.index}

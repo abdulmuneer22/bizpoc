@@ -12,7 +12,7 @@ const AppNavigator = createStackNavigator(
     SplashScreen: {
 			screen: SplashScreen
     },
-		Login: {
+	Login: {
 			screen: Login
     },
     OTPScreen: {
@@ -26,7 +26,8 @@ const AppNavigator = createStackNavigator(
 		}
 	},
 	{
-		initialRouteName: 'DrawerNavigator'
+		initialRouteName: 'DrawerNavigator',
+		headerMode : 'none'
 	}
 );
 

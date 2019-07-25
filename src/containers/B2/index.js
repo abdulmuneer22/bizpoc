@@ -1,22 +1,31 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import Header from '../../components/DrawerHeader'
+import ScreenOne from './ScreenOne'
+import ScreenTwo from './ScreenTwo'
+import ScreenThree from './ScreenThree'
 
-export class B2Stack extends Component {
 
-    openDrawer = () => this.props.navigation.openDrawer()
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-    render() {
-        return (
-            <View style={{
-                flex : 1,
-                alignItems : 'flex-start'
-            }}>
-                <Header openDrawer={this.openDrawer}/>
-                <Text> B2Stack </Text>
-            </View>
-        )
-    }
-}
+const B2StackNavigator = createStackNavigator(
+	{
+        ScreenOne : {
+            screen: ScreenOne
+        },
+        ScreenTwo : {
+            screen: ScreenTwo
+        },
+        ScreenThree : {
+            screen: ScreenThree
+        }
+    },
+    {
+		initialRouteName: 'ScreenOne',
+		headerMode : 'screen'
+	}
+);
 
-export default B2Stack
+
+
+export default createAppContainer(B2StackNavigator);
