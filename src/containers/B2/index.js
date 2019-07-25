@@ -22,7 +22,7 @@ const B2StackNavigator = createStackNavigator(
     },
     {
 		initialRouteName: 'ScreenOne',
-		headerMode : 'screen'
+		headerMode : 'float'
 	}
 );
 

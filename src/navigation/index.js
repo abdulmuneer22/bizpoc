@@ -1,7 +1,6 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import SplashScreen from '../containers/SplashScreen'
-import Login from '../containers/Login';
 import OTPScreen from '../containers/OTPScreen'
 import Completed from '../containers/Completed'
 
@@ -12,9 +11,6 @@ const AppNavigator = createStackNavigator(
     SplashScreen: {
 			screen: SplashScreen
     },
-	Login: {
-			screen: Login
-    },
     OTPScreen: {
 			screen: OTPScreen
     },
@@ -22,11 +18,11 @@ const AppNavigator = createStackNavigator(
 			screen: Completed
     },
     DrawerNavigator: {
-			screen: DrawerNavigator
-		}
+	screen: DrawerNavigator
+	}
 	},
 	{
-		initialRouteName: 'DrawerNavigator',
+		initialRouteName: 'SplashScreen',
 		headerMode : 'none'
 	}
 );

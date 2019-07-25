@@ -4,9 +4,6 @@ import { Text, View } from 'react-native'
 import Header from '../components/DrawerHeader'
 
 export class Home extends Component {
-    static navigationOptions = {
-        header : null   
-     };
 
     openDrawer = () => this.props.navigation.openDrawer()
 
