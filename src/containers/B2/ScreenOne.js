@@ -8,6 +8,9 @@ export class ScreenOne extends Component {
     openDrawer = () => {
         this.props.navigation.openDrawer()}
 
+    static navigationOptions = {
+        title: 'B2 Stack Navigation',
+    };
     render() {
         return (
             <View>

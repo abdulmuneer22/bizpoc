@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View , Button } from 'react-native'
 
 import Header from '../components/DrawerHeader'
 
 export class Home extends Component {
 
     openDrawer = () => this.props.navigation.openDrawer()
+
+    gotoB1 = () => this.props.navigation.navigate("B1Navigator")
+
+    gotoB2 = () => this.props.navigation.navigate("B2Navigator")
 
     render() {
         return (
@@ -19,7 +23,8 @@ export class Home extends Component {
                     justifyContent : 'center',
                     alignItems : 'center',
                 }}>
-                    <Text> Inside Drawer Home </Text>
+                    <Button title="Go to B1 Stack" onPress={this.gotoB1}/>
+                    <Button title="Go to B2 Stack" onPress={this.gotoB2}/>
                 </View>
                 
             </View>

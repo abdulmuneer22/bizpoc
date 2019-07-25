@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View , Button} from 'react-native'
 
-import { NavigationActions , StackActions } from 'react-navigation';
-
-
 
 const DrapwerItems = [
     {
@@ -14,12 +11,12 @@ const DrapwerItems = [
     {
         name : "Item One",
         index : 1,
-        target : 'B1Stack'
+        target : 'ItemOne'
     },
     {
         name : "Item Two",
         index : 2,
-        target : 'B2Stack'
+        target : 'ItemTwo'
     }
 ]
 

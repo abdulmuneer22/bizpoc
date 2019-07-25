@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
-import NavigationHeader from '../components/NavigationHeader';
 
-const resetAction = StackActions.reset({
-	index: 0,
-	actions: [ NavigationActions.navigate({ routeName: 'DrawerNavigator' }) ]
-});
+
 
 export class Completed extends Component {
 	reset = () => {
-		this.props.navigation.dispatch(resetAction);
+		this.props.navigation.navigate('DrawerNavigator');
 	};
 
 	render() {
@@ -21,7 +17,6 @@ export class Completed extends Component {
 					paddingTop: 45
 				}}
 			>
-				<NavigationHeader navigation={this.props.navigation} />
 				<View
 					style={{
 						flex: 1

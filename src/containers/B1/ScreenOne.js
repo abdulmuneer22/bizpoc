@@ -6,6 +6,11 @@ import Header from '../../components/DrawerHeader'
 export class ScreenOne extends Component {
     openDrawer = () => {
         this.props.navigation.openDrawer()}
+
+
+    static navigationOptions = {
+        title: 'B1 Stack Navigation',
+    };
     
     render() {
         return (

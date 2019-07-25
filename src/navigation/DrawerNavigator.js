@@ -2,9 +2,9 @@ import React from "react";
 import { createDrawerNavigator } from "react-navigation";
 import DrawerComponent from '../components/DrawerComponent'
 
-import Home from '../containers/Home'
-import B1Stack from '../containers/B1'
-import B2Stack from '../containers/B2'
+import Home from '../navigation/HomeNavigation'
+import ItemOne from '../containers/ItemOneScreen'
+import ItemTwo from '../containers/ItemTwoScreen'
 
 const DrawerNavigator = createDrawerNavigator(
   {
@@ -14,17 +14,11 @@ const DrawerNavigator = createDrawerNavigator(
         title: "Home"
       }
     },
-    B1Stack: {
-        screen: B1Stack,
-        params: {
-          title: "B1Stack"
-        }
+    ItemOne: {
+        screen: ItemOne,
       },
-      B2Stack: {
-        screen: B2Stack,
-        params: {
-          title: "B2Stack"
-        }
+      ItemTwo: {
+        screen: ItemTwo,
       }
   },
   {

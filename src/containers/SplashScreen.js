@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { View, Button } from 'react-native';
-import { TouchableOpacity ,SafeAreaView } from 'react-native';
-
-
-
 export class SplashScreen extends Component {
 	render() {
 		return (

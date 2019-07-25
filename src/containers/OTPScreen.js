@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
 
-import NavigationHeader from '../components/NavigationHeader';
 export class OTPScreen extends Component {
 	render() {
 		return (
@@ -11,7 +10,6 @@ export class OTPScreen extends Component {
                     paddingTop : 45
 				}}
 			>
-				<NavigationHeader navigation={this.props.navigation}/>
 				<View
 					style={{
 						flex: 1

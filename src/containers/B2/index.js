@@ -1,6 +1,3 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-import Header from '../../components/DrawerHeader'
 import ScreenOne from './ScreenOne'
 import ScreenTwo from './ScreenTwo'
 import ScreenThree from './ScreenThree'

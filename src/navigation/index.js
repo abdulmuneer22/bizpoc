@@ -1,33 +1,40 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator, createAppContainer , createSwitchNavigator } from 'react-navigation';
 
-import SplashScreen from '../containers/SplashScreen'
-import OTPScreen from '../containers/OTPScreen'
-import Completed from '../containers/Completed'
+import SplashScreen from '../containers/SplashScreen';
+import OTPScreen from '../containers/OTPScreen';
+import Completed from '../containers/Completed';
 
-import DrawerNavigator from '../navigation/DrawerNavigator'
+import DrawerNavigator from '../navigation/DrawerNavigator';
 
-const AppNavigator = createStackNavigator(
+const OnboardStack = createStackNavigator(
 	{
-    SplashScreen: {
+		SplashScreen: {
 			screen: SplashScreen
-    },
-    OTPScreen: {
+		},
+		OTPScreen: {
 			screen: OTPScreen
-    },
-    Completed: {
+		},
+		Completed: {
 			screen: Completed
-    },
-    DrawerNavigator: {
-	screen: DrawerNavigator
-	}
+		}
 	},
 	{
 		initialRouteName: 'SplashScreen',
-		headerMode : 'none'
+		headerMode: 'screen'
 	}
 );
 
+const AppNavigator = createSwitchNavigator(
+	{
+		Onboarding: OnboardStack,
+		DrawerNavigator: {
+			screen: DrawerNavigator
+		}
+	},
+	{
+		initialRouteName: 'Onboarding',
+		headerMode: 'none'
+	}
+);
 
 export default createAppContainer(AppNavigator);
-
-
